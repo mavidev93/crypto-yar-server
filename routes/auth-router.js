@@ -4,7 +4,7 @@ const passport = require("passport");
 router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 
 router.get("/google/callback", passport.authenticate("google"), (req, res) => {
-  res.redirect("http://localhost:3000");
+  res.redirect("/");
 });
 
 router.get("/user", (req, res) => {
@@ -22,7 +22,7 @@ router.get("/user", (req, res) => {
 router.get("/logout", (req, res) => {
   req.session = null;
   req.logOut();
-  res.redirect("http://localhost:3000");
+  res.redirect("/");
 });
 
 module.exports = router;

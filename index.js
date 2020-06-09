@@ -5,13 +5,15 @@ const cors = require("cors");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 require("./oauth/passport.setup");
+const path = require("path");
 // const isLoggedIn = require("./middlewares/isLoggedIn");
 
 const db = require("./db");
 const cryptoRouter = require("./routes/crypto-router");
 const authRouter = require("./routes/auth-router");
-
 const app = express();
+//serve front end
+
 const apiPort = 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,6 +35,12 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 app.use("/auth", authRouter);
 
-app.use("/", cryptoRouter);
+app.use("/crypto", cryptoRouter);
+
+app.use(express.static("client/build"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
