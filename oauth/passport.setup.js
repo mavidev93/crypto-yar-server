@@ -17,6 +17,7 @@ passport.use(
       clientID: process.env.CLIENTID,
       clientSecret: process.env.CLIENRSECRET,
       callbackURL: process.env.CALLBACKURL,
+      proxy: true,
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOne({
