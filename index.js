@@ -36,8 +36,11 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.use("/auth", authRouter);
 
 app.use("/crypto", cryptoRouter);
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("/client/build"));
 
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
