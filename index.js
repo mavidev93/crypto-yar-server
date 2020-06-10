@@ -13,7 +13,7 @@ const authRouter = require("./routes/auth-router");
 const app = express();
 //serve front end
 
-const apiPort = 5000;
+const apiPort = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
