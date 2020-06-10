@@ -35,7 +35,6 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.use("/auth", authRouter);
 
 app.use("/crypto", cryptoRouter);
-<<<<<<< HEAD
 // if (process.env.NODE_ENV === "production") {
 app.use(express.static("build"));
 
@@ -43,16 +42,5 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 // }
-=======
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  const path = require("path");
-
-  app.get("/*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
->>>>>>> 2b5b14fe0b5316633855124e04905c248793c069
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
