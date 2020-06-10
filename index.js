@@ -35,12 +35,10 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 app.use("/auth", authRouter);
 
 app.use("/crypto", cryptoRouter);
-// if (process.env.NODE_ENV === "production") {
 app.use(express.static("build"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
-// }
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`));
