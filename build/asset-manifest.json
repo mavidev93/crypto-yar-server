@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.60d081d4.chunk.css",
+    "main.css": "/static/css/main.ec0080f9.chunk.css",
     "main.js": "/static/js/main.6043d600.chunk.js",
     "main.js.map": "/static/js/main.6043d600.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7fb9cef2.js",
@@ -8,16 +8,16 @@
     "static/js/2.f5742d50.chunk.js": "/static/js/2.f5742d50.chunk.js",
     "static/js/2.f5742d50.chunk.js.map": "/static/js/2.f5742d50.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.658af59db47a493d9f063c0da168600e.js": "/precache-manifest.658af59db47a493d9f063c0da168600e.js",
+    "precache-manifest.d3e96e6fb314db6d7cb0dfd51dd672d0.js": "/precache-manifest.d3e96e6fb314db6d7cb0dfd51dd672d0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.60d081d4.chunk.css.map": "/static/css/main.60d081d4.chunk.css.map",
+    "static/css/main.ec0080f9.chunk.css.map": "/static/css/main.ec0080f9.chunk.css.map",
     "static/js/2.f5742d50.chunk.js.LICENSE.txt": "/static/js/2.f5742d50.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/static/media/Vazir-Light-WOL.ef197892.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.7fb9cef2.js",
     "static/js/2.f5742d50.chunk.js",
-    "static/css/main.60d081d4.chunk.css",
+    "static/css/main.ec0080f9.chunk.css",
     "static/js/main.6043d600.chunk.js"
   ]
 }
